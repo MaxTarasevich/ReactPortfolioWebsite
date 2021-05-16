@@ -7,7 +7,7 @@ import {navbar} from "../data/navbar"
 
 const Menu = () => {
     const [isOpen, setIsOpen] = useState(false)
-    const [links, setLinks] = useState(navbar)
+   
     return (
         <>
          <div className="menu-btn">
@@ -20,14 +20,14 @@ const Menu = () => {
             <header className={`${isOpen ? 'header open' : 'header'}`}>
             <nav>
                 <ul>
-                  {links.map(( {id, title, url}) => {
+                {navbar.map(( {id, title, url}) => {
                      
-                      return (
-                          <li key={id} onClick={() => setIsOpen(!isOpen)}>
-                              <Link to={url}>{title}</Link>
-                          </li>
-                      )
-                  })}
+                     return (
+                         <li key={id} onClick={() => setIsOpen(!isOpen)}>
+                             <Link to={url}>{title}</Link>
+                         </li>
+                     )
+                 })}
                 </ul>
             </nav>
         </header>
@@ -37,3 +37,17 @@ const Menu = () => {
 }
 
 export default Menu
+/*
+Зачем здесь использовать состояние????!
+ const [links, setLinks] = useState(navbar)
+
+ {links.map(( {id, title, url}) => {
+                     
+                      return (
+                          <li key={id} onClick={() => setIsOpen(!isOpen)}>
+                              <Link to={url}>{title}</Link>
+                          </li>
+                      )
+                  })}
+
+*/ 
