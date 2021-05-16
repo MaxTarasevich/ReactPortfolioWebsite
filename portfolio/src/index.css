@@ -38,7 +38,6 @@ img{
   cursor: pointer;
 }
 
-
 /* Header */
 .header{
   position: absolute;
@@ -59,8 +58,9 @@ align-items: center;
 justify-content: center;
 min-height: 100vh;
 }
-
-
+.header nav ul li{
+ margin: 20px 0; 
+}
 
 /* Homepage */
 .homepage{
@@ -78,6 +78,7 @@ min-height: 100vh;
   align-items: center;
   min-height: 100vh;
   color:#fff;
+  text-align: center;
 }
 .homepage .overlay h1{
   text-transform: uppercase;
@@ -97,4 +98,27 @@ min-height: 100vh;
 }
 .homepage .overlay ul li a{
   font-size: 46px;
+}
+
+@media (max-width:992px) {
+  .homepage .overlay h1{
+    font-size: 64px;
+  }
+  
+}
+@media (max-width:500px) {
+  .menu-btn{
+    right: 30px;
+  }
+  .homepage .overlay h1{
+    font-size: 30px;
+  }
+  .homepage .overlay p{
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .homepage .overlay ul li a{
+    font-size: 24px;
+  }
+  
 }

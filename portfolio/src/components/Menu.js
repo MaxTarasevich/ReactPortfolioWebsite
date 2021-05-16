@@ -1,32 +1,37 @@
+import {useState} from "react"
 import {Link} from "react-router-dom"
 import {BiMenuAltRight} from "react-icons/bi"
+import {navbar} from "../data/navbar"
 
 
 
 const Menu = () => {
+    const [isOpen, setIsOpen] = useState(false)
+    const [links, setLinks] = useState(navbar)
     return (
         <>
          <div className="menu-btn">
-                <button>
+                <button onClick={() => setIsOpen(!isOpen)}>
                     <BiMenuAltRight />
                 </button>
             </div>
 
-        <header className="header">
+      
+            <header className={`${isOpen ? 'header open' : 'header'}`}>
             <nav>
                 <ul>
-                   <li>
-                    <Link to="/">Home</Link>
-                   </li>
-                   <li>
-                   <Link to="/projects">Projects</Link>
-                    </li>
-                    <li>
-                    <Link to="/contacts">Contacts</Link>
-                    </li>
+                  {links.map(( {id, title, url}) => {
+                     
+                      return (
+                          <li key={id} onClick={() => setIsOpen(!isOpen)}>
+                              <Link to={url}>{title}</Link>
+                          </li>
+                      )
+                  })}
                 </ul>
             </nav>
         </header>
+      
         </>
     )
 }
