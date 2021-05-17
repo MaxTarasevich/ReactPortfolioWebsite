@@ -1,17 +1,17 @@
-import {FaTwitter, FaGithub} from "react-icons/fa"
+import {FaTelegram, FaGithub} from "react-icons/fa"
 
 const Homepage = () => {
     return (
         <>
             <section className="homepage">
               <div className="overlay">
-              <h1>Thomas Sankara</h1>
+              <h1>Maksim Tarasevich</h1>
                 <p>
-                    Front-end Web Developer
+                    Front-end Developer
                 </p>
                <ul>
                    <li>
-                       <a href="https://twitter.com/?lang=ru" target="_blank" rel="noopenner noreferrer"><FaTwitter /></a>
+                       <a href="https://twitter.com/?lang=ru" target="_blank" rel="noopenner noreferrer"><FaTelegram /></a>
                    </li>
                    <li>
                        <a href="https://twitter.com/?lang=ru" target="_blank" rel="noopenner noreferrer"><FaGithub /></a>

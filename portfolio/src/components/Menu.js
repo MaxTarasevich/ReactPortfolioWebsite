@@ -37,17 +37,3 @@ const Menu = () => {
 }
 
 export default Menu
-/*
-Зачем здесь использовать состояние????!
- const [links, setLinks] = useState(navbar)
-
- {links.map(( {id, title, url}) => {
-                     
-                      return (
-                          <li key={id} onClick={() => setIsOpen(!isOpen)}>
-                              <Link to={url}>{title}</Link>
-                          </li>
-                      )
-                  })}
-
-*/ 

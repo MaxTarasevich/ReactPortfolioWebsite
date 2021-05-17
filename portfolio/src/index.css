@@ -1,8 +1,9 @@
 :root{
   --background-image: linear-gradient(120deg, rgba(0, 181, 148, 0.5), rgba(1, 84, 69, 0.67) );
-  --background-overlay:rgba(0,0,0,0.4);
+  --background-overlay:rgba(37, 37, 37, 0.9);
+  /*--background-image:linear-gradient(to right, rgba(40, 179, 204, 0.8), rgba(56, 119, 129, 0.7));*/
 }
-
+/*Global style*/
 *{
   margin: 0;
   padding: 0;
@@ -10,7 +11,6 @@
 }
 body{
   font-family: "Manrope", sans-serif;
-  overflow: hidden;
 }
 ul{
   list-style: none;
@@ -23,12 +23,13 @@ a{
 img{
   max-width: 100%;
 }
+
 /*Menu button*/
 .menu-btn{
   position: absolute;
   right: 80px;
   margin-top: 50px;
-  z-index: 5;
+  z-index: 6;
 }
  .menu-btn button{
   background-color:transparent;
@@ -46,6 +47,7 @@ img{
   overflow: hidden;
   width: 200px;
   transition: all .5s ease-in-out;
+  z-index: 5;
 }
 .header.open{
   height: 100%;
@@ -59,7 +61,16 @@ justify-content: center;
 min-height: 100vh;
 }
 .header nav ul li{
- margin: 20px 0; 
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0.35em 0.3em;
+  border-radius:10px;
+ margin: 20px 0;
+ transition: all 0.5s ease-in;
+}
+.header nav ul li:hover{
+background:var(--background-image);
+
 }
 
 /* Homepage */
@@ -99,7 +110,70 @@ min-height: 100vh;
 .homepage .overlay ul li a{
   font-size: 46px;
 }
+
+/*Projects*/
+
+.projects{
+  background-image: var(--background-image);
+  min-height: 100vh;
+
+}
+.projects h1{
+  padding: 50px 80px;
+  color:#fff;
+}
+.projects .cards{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  gap:20px;
+  color:#fff;
+}
+.projects .cards h4{
+  font-size: 24px;
+  margin:20px 0 10px 0;
+}
+.projects .cards p{
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.projects .cards article{
+  padding: 3% 6%;
+  background-color:rgba(103, 177, 189, 0.5);
+ border:2px solid white;
+ border-radius:10px;
+}
+.projects .cards .cards__img{
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top left;
+  border-radius: 10px;
+}
+.projects .cards ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects .cards ul li a{
+  display: flex;
+  min-width: 90px;
+  align-items: center;
+  justify-content: space-around;
+  background-color:#325ebe;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 10px;
+  }
+.projects .cards ul li:first-of-type a{
+background-color:#333;
+}
+
 /*Contacts*/
+
 .contacts{
   background-image:var(--background-image);
   min-height: 100vh;
@@ -116,20 +190,60 @@ min-height: 100vh;
   text-align: center;
 }
 .contacts ul li{
-  margin: 10px 0;
+  margin: 20px 0;
   
 }
 .contacts ul li a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.contacts ul li a span{
+  margin-left: 15px;
+}
+
+/*Error*/
+.error{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:var(--background-image);
+  color:#fff;
+}
+.error h1{
+font-size: 48px;
+margin-bottom: 40px;
+}
+.error div{
   font-size: 30px;
 }
 
 /*Media*/
+
+@media (max-width:1150px){
+  .projects .cards{
+    padding: 0 20px 20px;
+  }
+}
+
+
 @media (max-width:992px) {
   .homepage .overlay h1{
     font-size: 64px;
   }
+}
+
+@media (max-width:768px){
+  .projects .cards{
+    grid-template-columns: repeat(2,1fr);
+    
+  }
   
 }
+
 @media (max-width:500px) {
   .menu-btn{
     right: 30px;
@@ -144,8 +258,16 @@ min-height: 100vh;
   .homepage .overlay ul li a{
     font-size: 24px;
   }
+  .projects .cards{
+    grid-template-columns:1fr;
+  }
+  .projects .cards p{
+    font-size: 15px;
+  }
   .contacts ul li a{
     font-size: 18px;
   }
-  
+  .contacts h1, .project h1{
+    padding: 50px 30px;
+  }
 }
