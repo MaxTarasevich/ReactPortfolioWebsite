@@ -27,13 +27,13 @@ img{
 /*Menu button*/
 .menu-btn{
   position: absolute;
-  right: 80px;
+  right: 50px;
   margin-top: 50px;
   z-index: 6;
 }
  .menu-btn button{
   background-color:transparent;
-  font-size: 36px;
+  font-size: 66px;
   color:#fff;
   border: none;
   cursor: pointer;
