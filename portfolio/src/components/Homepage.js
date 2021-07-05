@@ -11,10 +11,10 @@ const Homepage = () => {
                 </p>
                <ul>
                    <li>
-                       <a href="https://twitter.com/?lang=ru" target="_blank" rel="noopenner noreferrer"><FaTelegram /></a>
+                       <a href="https://tlgg.ru/MaxTarasevich" target="_blank" rel="noopenner noreferrer"><FaTelegram /></a>
                    </li>
                    <li>
-                       <a href="https://twitter.com/?lang=ru" target="_blank" rel="noopenner noreferrer"><FaGithub /></a>
+                       <a href="https://github.com/MaxTarasevich?tab=repositories" target="_blank" rel="noopenner noreferrer"><FaGithub /></a>
                    </li>
                   
                </ul>
